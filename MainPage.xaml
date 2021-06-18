@@ -1,0 +1,37 @@
+﻿<Page
+    x:Class="Uppgift5.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Uppgift5"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Width="566" Height="652">
+
+    <Grid x:Name="gridView" VerticalAlignment="Top" HorizontalAlignment="Left">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="buttonNewCustomer" Content="Add New Customer" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Click="button_Click" Height="32" Width="141"/>
+        <Button x:Name="buttonEditCustomer" Content="Edit Customer" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Click="button_Click" Height="32" Width="141" Grid.Column="1"/>
+        <Button x:Name="buttonNewOrder" Content="Add New Order" HorizontalContentAlignment="Left" Click="button_Click" ScrollViewer.VerticalScrollBarVisibility="Visible" VerticalContentAlignment="Center" Grid.Column="2" HorizontalAlignment="Left" Height="32" Width="117"/>
+        <Button x:Name="buttonEditOrder" Content="Edit Order" HorizontalContentAlignment="Left" Click="button_Click" ScrollViewer.VerticalScrollBarVisibility="Visible" VerticalContentAlignment="Center" Grid.Column="3" HorizontalAlignment="Left" Height="32" Width="117"/>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Grid.ColumnSpan="4">
+            <StackPanel>
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">Customers</TextBlock>
+                <ListView x:Name="listCustomers" MinWidth="256" MinHeight="512" SelectionChanged="listCustomers_SelectionChanged"></ListView>
+            </StackPanel>
+            <StackPanel>
+                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Orders</TextBlock>
+                <ListView x:Name="listOrders" MinWidth="256" MinHeight="512"></ListView>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>

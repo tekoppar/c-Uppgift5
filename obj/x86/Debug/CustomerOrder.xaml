@@ -1,0 +1,59 @@
+﻿<Page
+    x:Class="Uppgift5.CustomerOrder"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Uppgift5"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" VerticalAlignment="Center" HorizontalAlignment="Center" Height="488" Width="1101">
+
+    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+        <StackPanel Height="32" Margin="5,5,5,15" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock x:ConnectionId='13' x:Name="customerNameText" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,5,0" Text="Customer:"/>
+            <ComboBox x:ConnectionId='14' x:Name="CustomerList" Height="32" Margin="5,0,0,0" VerticalAlignment="Center" HorizontalContentAlignment="Center" Width="256"                                                  IsEditable="True" IsDropDownOpen="True" />
+        </StackPanel>
+        <Grid x:ConnectionId='2' x:Name="gridView" VerticalAlignment="Top" HorizontalAlignment="Center" Width="502">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="196"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:ConnectionId='6' x:Name="textBlock" Text="Name:" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+            <TextBox x:ConnectionId='7' x:Name="textBoxName" Text="" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" UseLayoutRounding="True" VerticalAlignment="Center" Grid.Column="1" Margin="10,0,-296,0" IsReadOnly="True"/>
+            <TextBlock Grid.Column="0" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Center" Text="Last Name:" />
+            <TextBox x:ConnectionId='8' Grid.Column="1" Grid.Row="1" x:Name="textBoxLastName" Text="" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" UseLayoutRounding="True" VerticalAlignment="Center" Margin="10,0,-296,0" IsReadOnly="True"/>
+            <TextBlock Grid.Column="0" Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Center" Text="Adress:" />
+            <TextBox x:ConnectionId='9' Grid.Column="1" Grid.Row="2" x:Name="textBoxAdress" Text="" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" UseLayoutRounding="True" VerticalAlignment="Center" Margin="10,0,-296,0" IsReadOnly="True"/>
+            <TextBlock Grid.Column="0" Grid.Row="3" HorizontalAlignment="Right" VerticalAlignment="Center" Text="Customer Number:" />
+            <TextBox x:ConnectionId='10' Grid.Column="1" Grid.Row="3" x:Name="textBoxCustomerNumber" Text="" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" UseLayoutRounding="True" VerticalAlignment="Center" IsReadOnly="True" Margin="10,0,-296,0"/>
+            <TextBlock Grid.Column="0" Grid.Row="4" HorizontalAlignment="Right" VerticalAlignment="Center" Text="Order Number:" />
+            <TextBox x:ConnectionId='11' Grid.Column="1" Grid.Row="4" x:Name="textBoxOrderNumber" Text="" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" UseLayoutRounding="True" VerticalAlignment="Center" IsReadOnly="True" Margin="10,0,-296,0"/>
+            <TextBlock Grid.Column="0" Grid.Row="5" HorizontalAlignment="Right" VerticalAlignment="Center" Text="Order Type:" />
+            <ComboBox x:ConnectionId='12' x:Name="orderTypeComboBox" Grid.Row="5" Grid.Column="1" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10,5,-296,5" />
+        </Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button x:ConnectionId='3' x:Name="btnReset" Content="Reset Values" HorizontalAlignment="Center" Margin="0,5,0,0"                   />
+            <Rectangle Margin="5,5,5,5" />
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Right" UseLayoutRounding="True" Grid.Column="1" Margin="0,0,25,0">
+                <Button x:ConnectionId='4' x:Name="btnNewOrder" Content="New Order" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"                   Padding="5,5,5,5" />
+                <Button x:ConnectionId='5' x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Center" Margin="5,5,5,5"                   VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="5,5,5,5" />
+            </StackPanel>
+        </Grid>
+    </StackPanel>
+</Page>
+
